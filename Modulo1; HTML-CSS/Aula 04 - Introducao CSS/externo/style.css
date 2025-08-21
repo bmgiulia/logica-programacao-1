@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(254, 193, 149);
+}
+
+main {
+    font-size: 16px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: "Libertinus Serif", serif;
+    font-weight: normal;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-indent: 25px;
+    color: rgb(0, 0, 0);
+}
+
+main > section > div > p{
+    font-size: 1em;
+    color: rgb(255, 0, 0);
+
+}
+
+a {
+    color:rgb(0, 0, 0);
+    font-style: oblique ;
+
+}
