@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Giulia Bruno</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav-wrapper">
+      <h1 class="logo">Giulia<span class="realce">Bruno</span></h1>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="curriculo.html">Currículo</a>
+        <a href="projetos-pessoais.html">Projetos Pessoais</a>
+        <a href="certificados.html">Certificados</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-img">
+        <img src="imagem/fotogiulia.jpg" alt="Foto de Giulia" class="profile-img" />
+      </div>
+      <div class="hero-text">
+        <h2><span id="typed"></span></h2>
+        <p>Aqui você encontra meu aprendizado, conquistas e experiências acadêmicas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section sobre-modern">
+    <div class="container about-text">
+      <h2 class="section-title">Sobre mim</h2>
+      <p class="section-text">
+        Olá! Eu sou Giulia Bruno, estudante de Tecnologia da Informação com paixão por inovação e
+        soluções digitais criativas. Estou sempre em busca de explorar novas áreas da tecnologia,
+        desde desenvolvimento web até experiências de usuário, buscando unir lógica, estética e
+        funcionalidade em cada projeto.
+      </p>
+      <p class="section-text">
+        Meu portfólio apresenta minha trajetória de aprendizado, projetos acadêmicos e iniciativas
+        pessoais que refletem crescimento contínuo e dedicação à excelência. Meu objetivo é desenvolver
+        soluções digitais modernas, eficientes e acessíveis, aplicando criatividade, boas práticas de
+        desenvolvimento e foco no usuário.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill-card"> <i class="devicon-html5-plain colored"></i> <span>HTML5</span> </div>
+        <div class="skill-card"> <i class="devicon-css3-plain colored"></i> <span>CSS3</span> </div>
+        <div class="skill-card"> <i class="devicon-javascript-plain colored"></i> <span>JavaScript</span> </div>
+        <div class="skill-card"> <i class="devicon-python-plain colored"></i> <span>Python</span> </div>
+        <div class="skill-card"> <i class="devicon-git-plain colored"></i> <span>Git</span> </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section contato-modern">
+    <div class="container contato-card">
+      <h2 class="section-title">Contato</h2>
+      <p>Entre em contato comigo pelo LinkedIn, GitHub, e-mail ou telefone.</p>
+      <div class="social-links">
+        <a href="https://github.com/bmgiulia" class="btn-social" target="_blank">
+          <i class="devicon-github-original"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/giulia-bm" class="btn-social" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:giuliabrunomoraes21@gmail.com" class="btn-social">
+          <i class="fas fa-envelope"></i> giuliabrunomoraes21@gmail.com
+        </a>
+        <a href="tel:+5511933587634" class="btn-social">
+          <i class="fas fa-phone"></i> +55 11 93358-7634
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Giulia Bruno. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const text = "Bem-vindo ao meu Portfólio!";
+    const typedEl = document.getElementById("typed");
+
+    let i = 0;
+    function digitar() {
+      if (i < text.length) {
+        typedEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(digitar, 120);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", digitar);
+  </script>
+</body>
+</html>
