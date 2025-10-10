@@ -1,0 +1,483 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 0.82rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo com Pacifico */
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem; /* ajuste como quiser */
+  font-weight: normal;
+  color: #fff;
+}
+
+.logo .realce {
+  color: #ff88db;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #7c7c7c;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #797979;
+}
+
+/* Menu mobile */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #111;
+    margin-top: 1rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+  }
+
+  #menu-toggle:checked ~ .navbar {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #222;
+  }
+}
+
+/* Hero / Apresentação */
+.hero {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f1f1f1 0%, #eaeaea 100%);
+  padding: 5rem 2rem;
+  height: 80vh;
+}
+
+.hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-img {
+  flex: 1;
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #ff88db;
+  box-shadow: 0 0 25px #ff88db;
+  object-fit: cover;
+}
+
+.hero-text {
+  flex: 2;
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #ff88db; 
+  margin-bottom: 1rem;
+}
+
+.hero-text h2,
+.hero-text p {
+  text-align: left;
+}
+
+.hero-text p {
+  margin: 1rem 0 2rem;
+}
+
+.btn-primary {
+  background-color: #111;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h2,
+  .hero-text p {
+    text-align: center;
+  }
+}
+
+/* Seções */
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section-title,
+.titulo-secao {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.section-subtitle,
+.descricao-secao {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.section-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+/* Cards de habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 6rem;
+  height: 6rem;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card i {
+  font-size: 40px;
+}
+
+.skill-card span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #222;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Cards de projetos */
+/* Garantir que todos os cards de projeto tenham mesma altura */
+.projeto-card {
+  flex: 1 1 320px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column; /* garante que conteúdo fique em coluna */
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Faz os cards terem altura igual */
+.projetos-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch; /* alinhamento igual */
+}
+
+/* Imagens com tamanho uniforme e mantendo proporção */
+.projeto-img img {
+  width: 100%;
+  height: 200px; /* altura fixa */
+  object-fit: cover; /* mantém proporção e corta excesso */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Conteúdo do card ocupa espaço restante */
+.projeto-conteudo {
+  flex: 1; /* faz ocupar todo o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+/* Botão centralizado */
+.projeto-card .btns a {
+  background-color: #222;       /* fundo escuro */
+  color: #fff;                  /* cor do texto */
+  text-decoration: none;        /* sem sublinhado */
+  padding: 0.55rem 1.2rem;      /* padding igual ao original */
+  border-radius: 4px;           /* cantos arredondados */
+  font-weight: 600;             /* negrito */
+  font-size: 0.9rem;            /* tamanho da fonte */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* transição suave */
+  display: inline-block;        /* mantém formato de botão */
+}
+
+/* Hover do botão */
+.projeto-card .btns a:hover {
+  background-color: #ff00c8;   /* cor ao passar o mouse */
+  transform: scale(1.05);      /* leve aumento */
+}
+
+
+/* Botões sociais */
+.btn-social {
+  background-color: #111;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.btn-social:hover {
+  background-color: #7e7e7e;
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-social i {
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #111;
+}
+
+footer a {
+  color: #f9f9f9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Grid de certificados */
+.certificados-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch; /* altura igual para todos */
+  margin-top: 2rem;
+}
+
+/* Card de certificado */
+.certificado-card {
+  flex: 1 1 300px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagem do certificado */
+.certificado-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.certificado-card:hover .certificado-img img {
+  transform: scale(1.05);
+}
+
+/* Conteúdo do card */
+.certificado-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.certificado-conteudo h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.certificado-conteudo p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+
+.certificado-card .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.certificado-card .btns a {
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.certificado-card .btns a:hover {
+  background-color: #ff00c8;
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .certificados-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
